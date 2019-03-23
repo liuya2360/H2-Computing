@@ -1,0 +1,26 @@
+h1 {
+	color: white;
+	border: yellow, 4px width;
+	background: black;
+	text-align: center;
+}
+h2 {
+	font-size: 2 em;
+	font-family: Arial, sans-serif;
+	font-style: italic;
+}
+.Education{
+	color:red;
+}
+.Skills{
+	color:green;
+	font-size: 8px;
+}
+.potato_junior_college{
+	font-style: italic;
+	font-family: Courier New;
+}
+#special{
+	font-style: italic;
+	font-family: Courier New;
+}
