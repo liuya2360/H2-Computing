@@ -3,14 +3,22 @@ def findOccurance(n,d):
 	s = str(n)
 	for i in range(len(n)):
 		if i == 0:
-			if int(s[i])>=int(d):
-				cnt += int(10**(len(s[i+1:])))
-			#else:
-				#cnt += 10**(len(s[i+1:])-1)
-		if i != 0:
-			print(i, len(s[i+1:]),int(s[:i])*(10**(len(s[i+1:]))))
-			cnt += (int(s[:i])+1)*(10**(len(s[i+1:])))
-
+			if int(s[i]) > int(d):
+				cnt += 10**(len(s[i+1:]))
+			if int(s[i]) == int(d):
+				cnt += int(s[i+1:])+1
+		if i != 0 and i != len(n)-1:
+			if int(s[i]) > int(d):
+				cnt += (int(s[:i])+1)*(10**(len(s[i+1:])))
+			elif int(s[i]) == int(d):
+				cnt += int(s[:i])*(10**(len(s[i+1:]))) + int(s[i+1:])+1
+			else:
+				cnt += int(s[:i])*(10**(len(s[i+1:])))
+		if i == len(n)-1:
+			if int(s[i]) > int(d):
+				cnt += (int(s[:i])+1)*(10**(len(s[i+1:])))
+			else:
+				cnt += (int(s[:i]))*(10**(len(s[i+1:])))
 	return cnt
 
 n = input("input n:")
