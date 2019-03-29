@@ -1,10 +1,11 @@
 #0 -> iterative; 1 -> recursive
 flag = 1
 
-result = 0
+#need to account for the cases when a or b or both are negative 
+
 def it_product(a,b):
+	result = 0
 	for i in range(a):
-		global result
 		result += b
 	return result
 
