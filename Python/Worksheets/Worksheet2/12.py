@@ -1,5 +1,5 @@
 #0 -> iterative; 1 -> recursive
-flag = 0
+flag = 1
 
 def it_min(s):
 	minn = 0
