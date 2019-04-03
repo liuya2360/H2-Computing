@@ -2,7 +2,7 @@ file = open("primes1000000.txt", "r")
 
 prime = []
 for row in file:
-	prime.append(row)
+	prime.append(row.strip())
 
 i = input()
 if i in prime:
