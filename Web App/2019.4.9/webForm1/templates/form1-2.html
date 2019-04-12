@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        form {
+            /* Just to center the form on the page */
+            margin: 0 auto;
+            width: 400px;
+            /* To see the outline of the form */
+            padding: 1em;
+            border: 1px solid rgb(19, 19, 19);
+            border-radius: 1em;
+            
+        }
+        .form-row {
+            display:flex;
+            padding:0.5em;
+            justify-content:flex-end;
+        }
+        .form-row > input, .form-row > textarea {
+            flex:2;
+            
+        }
+        .form-row > label {
+            flex:1; 
+        }
+        .button{
+            display:flex;
+            justify-content: center;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <div class="form-row">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name">
+        </div>
+        <div class="form-row">
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div class="form-row">
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"></textarea>
+        </div>
+        <div class="button" class="form-row">
+            <button type="submit">Send your message</button>
+        </div>
+    </form>
+</body>
+</html>

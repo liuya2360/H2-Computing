@@ -1,0 +1,34 @@
+.container{
+    width: 30%;
+    margin: 2em auto;
+    border: 2px solid darkblue;
+    padding: 10px;
+    background: lightblue;
+    border-radius: 1em;
+}
+
+.element{
+    display: flex;
+}
+
+.table_container{
+    width: 30%;
+    margin: 2em auto;
+    background: lightcyan;
+    border: 2px solid darkgrey;
+    border-radius: 1em;
+    padding:10px;
+}
+
+.table{
+    display: flex;
+}
+
+.table_col1{
+    width: 25%;
+    text-align: right;
+}
+
+.table_col2{
+    width: 70%;
+}

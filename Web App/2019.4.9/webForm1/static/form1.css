@@ -1,0 +1,12 @@
+.row{
+    display: flex;
+}
+
+.container{
+    width: 30%;
+    margin: 2em auto;
+    background: lightcyan;
+    border: 2px solid darkgrey;
+    border-radius: 1em;
+    padding:10px;
+}
