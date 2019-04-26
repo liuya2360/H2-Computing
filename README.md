@@ -19,3 +19,6 @@ A Level H2 Computing notes
         * Circly Linked List (CLLL)
 
 ## Web App
+
+## Resource
+* pseudocode guide (Cambridge)
