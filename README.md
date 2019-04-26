@@ -1,6 +1,6 @@
 # H2-Computing
-A Level H2 Computing notes and codes 
-Class 19SH07
+A Level H2 Computing notes and codes  
+Class **19SH07**
 
 ## Python 
 * basic syntax 
