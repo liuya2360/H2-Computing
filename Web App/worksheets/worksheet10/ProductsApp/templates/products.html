@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="/static/products.css" />
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>Home</li>
+            <li>View Catalogue</li>
+            <li>Manage Catalogue</li>
+            <li>Help</li>
+        </ul>
+    </div>
+    <h1> Products</h1>
+    <div class="product-list">
+        {% for row in products %}
+         <div class="product">
+            <div class="product-image">
+                <image src="/static/image/{{row[3]}}" alt="product image">
+            </div>           
+            <div class="product-text">
+                <div class="product-name">{{row[0]}}</div>
+                <div class="product-description">{{row[1]}}</div>
+                <div class="product-price">{{row[2]}}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
