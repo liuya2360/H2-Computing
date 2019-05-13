@@ -54,7 +54,7 @@ class BST():
 			stack = [self.root]
 			print("{0:<10}{1:<10}{2:<10}".format("Node.data", "Node.left", "Node.right")) 
 			while len(stack) > 0: 
-				curretn = stack.pop()
+				current = stack.pop()
 				print(current)
 				if current.left != None: 
 					stack.append(current.left)
