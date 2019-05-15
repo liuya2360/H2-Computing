@@ -57,9 +57,11 @@ class SLLL():
                 self._first = previous.getNext()
                 return True 
             else: 
-                while previous.getNext().getData() != data and previous.getNext() != None: 
+                while previous.getNext() != None and previous.getNext().getData() != data: 
                     previous = previous.getNext() 
-                if previous.getNext().getData() == data: 
+                if previous.getNext() == None: 
+                    return False
+                elif previous.getNext().getData() == data: 
                     previous.setNext(previous.getNext().getNext()) 
                     return True
                 else: 
@@ -70,24 +72,27 @@ class SLLL():
             return False 
         else: 
             current = self._first 
-            while current.getData() != data and current.getNext() != None: 
+            while current != None and current.getData() != data: 
                 current = current.getNext() 
-            if current.getData() == data: 
+            if current == None: 
+                return False
+            else:  
                 return True 
-            else: 
-                return False 
 
     def getNode(self, data): 
         if self._first == None: 
             return None 
         else: 
             current = self._first 
-            if current.getData() != data and current != None: 
+            if current != None and current.getData() != data: 
                 current = current.getNext()
-            if current.getData == data: 
-                return current 
+            if current == None: 
+                return None
             else: 
-                return None 
+                if current.getData() == data: 
+                    return current 
+                else: 
+                    return None 
 
     def print(self):
         result = "" 
@@ -123,12 +128,12 @@ class DLLL(SLLL):
             return False
         else: 
             current = self._first 
-            while current.getData() != data and current != None:
+            while current != None and current.getData() != data:
                 current = current.getNext()
-            if current.getData == data: 
+            if current == None: 
+                return False
+            else: 
                 current.getPrev().setNext(current.getNext())
                 if current.getNext() != None: 
                     current.getNext().setPrev(current.getPrev())
                 return True 
-            else: 
-                return False 

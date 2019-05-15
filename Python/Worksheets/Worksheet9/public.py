@@ -93,6 +93,7 @@ def DLLL():
             return False 
         else: 
             current self.first 
+            #must check if current is none or not or the code will throw an error when trying to check current.data
             while current != None and current.data != data: 
                 current = current.next
             if current == None: 
@@ -119,15 +120,15 @@ def DLLL():
                 return False
             else: 
                 previous = self.first 
-                while previous != None and previous.next.data != data:
+                while previous.next != None and previous.next.data != data:
                     previous = previous.next 
-                if previous.next.data == data: 
+                if prevous.next == None: 
+                    return False
+                else: 
                     previous.next = previous.next.next
                     if previous.next.next != None: 
                         previous.next.next.previous = previous 
                     return True 
-                else: 
-                    return False 
 
     def exist(self, data):
         if self.first == None:
