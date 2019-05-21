@@ -32,10 +32,10 @@ class HashTable():
         while self.array[target][0] != key: 
             target = (target+1) % self.size 
             if target == end: 
-                return False: 
+                return False
         return self.array[target][1]
     
     def print(self): 
         for i in range(self.size): 
             if self.array[i] != None: 
-                print("{0:10}{0:10}".format(i, self.array[i]))
+                print("{0:<10}{1:<10}".format(i, self.array[i]))
