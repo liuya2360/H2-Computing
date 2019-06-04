@@ -36,6 +36,18 @@ class DLLL():
                 current.prev.next = current.next 
                 current.next.prev = current.prev 
                 return True 
+    
+    def exists(self, data): 
+        if self.first = None: 
+            return False 
+        else: 
+            current = self.first 
+            while current != None and current.data != data: 
+                current = current.next
+            if current == None: 
+                return False 
+            else: 
+                return True 
 
     def print(self): 
         current = self.first

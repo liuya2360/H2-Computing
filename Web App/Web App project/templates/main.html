@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <link rel="stylesheet" type="text/css" href="/static/main.css">
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>Home</li>
+                <li><a href="/add_place">Add Place</a></li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                Main
+            </div>
+            <div class="places">
+                {% for place in places %}
+                <div class="place-name">{{place["Name"]}}</div>
+                <div class="place-description">{{place["Description"]}}</div>
+                <div class="place-capacity">{{place["Capacity"]}}</div>
+                <div class="place-availability">{{place["Availability"]}}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

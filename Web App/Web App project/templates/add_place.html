@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Location</title>
+        <link rel="stylesheet" href="/static/add_place.css">
+    </head>
+    <body>
+        <form action="/submit" method="post" enctype = "multipart/form-data">
+            <div>
+                <label for="name">Location Name: </label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="description">Description: </label>
+                <input type="text" id="description" name="description">
+            </div>
+            <div>
+                <label for="capacity">Capacity: </label>
+                <input type="number" id="capacity" name="capacity">
+            </div>
+            <div>
+                <label for="availability">Availability: </label>
+                <input type="text" id="availability" name="availability">
+            </div>
+            <div>
+                <button type="submit">Add Location</button>
+            </div>
+        </form>
+    </body>
+</html>
