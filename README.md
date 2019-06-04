@@ -18,8 +18,14 @@ Class **19SH07**
         * Singly Linked List (SLLL)
         * DOubly Linked List (DLLL)
         * Circly Linked List (CLLL)
+    * Stack an Queue
+    * Binary Search Tree
+    * Hash Table
 
 ## Web App
+* HTML 
+* CSS 
+* SQLite
 
 ## Resource
 * pseudocode guide (Cambridge)
