@@ -1,0 +1,44 @@
+from flask import Flask, render_template, request, redirect 
+import sqlite3 
+
+def open_DB(db): 
+	connection = sqlite3.connect(db) #connect to database 
+	connection.row_factory = sqlite3.Row #return a dictionary instead of a tuple 
+	return connection  #return the connection 
+
+app = Flask("__name__") 
+
+@app.route("/")
+def root(): 
+	con = open_DB('catalogue.db') #connect to the database 
+	cur = con.excecute("SELECT * FROM Products ORDER BY price") #select all products infomation in acending order of price 
+	rows = cur.fetchall() #fetch all products data as a dictionary 
+	con.close() #close the connection 
+	return render_template("products.html", products = rows) #render products template, send rows(products information) to html variable products
+
+@app.route("/product") 
+def show_product_form(): 
+	return render_template("product_frm.html") #render add product form 
+
+@app.route("/add", methods = ["POST"])
+def add_product(): 
+	name = request.form["name"] #get new product details from webform using request 
+	description = request.form["description"]
+	price = request.form["price"]
+	if "image" in request.files: 
+		image_file = request.files["image"] #get image file 
+		image_file_name = image_file.filename #get image file name 
+		image_file.save('static/image/'+image_file_name) #save the image file to the target address 
+
+	con = open_DB('catalogue.db') #open the catalogue to write 
+	try: 
+		#write new products infomation to the database 
+		con.excecute("INSERT INTO Products (NAME, DESCRIPTION, PRICE, IMAGE) VALUES (?,?,?,?)", (name, description, price, image_file_name)) 
+	except Exception as err: 
+		print(str(err), error) #print error if there is any 
+	con.commit() #commit the change (IMPORTANT), else the change will not be saved 
+
+	return redirect("/") #redirect to the products page 
+
+if "__name__" == "__main__": 
+	app.run(debug = True) 

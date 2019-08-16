@@ -2,26 +2,37 @@
 <html>
     <head>
         <title>Main Page</title>
-        <link rel="stylesheet" type="text/css" href="/static/main.css">
+        <link rel="stylesheet" type="text/css" href="/static/main.css" />
     </head>
     <body>
-        <div>
-            <ul>
-                <li>Home</li>
-                <li><a href="/add_place">Add Place</a></li>
-            </ul>
-        </div>
-        <div>
-            <div>
-                Main
+        <div class="main-page">
+            <div class="menu">
+                <ul>
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="/add_location">Add Place</a></li>
+                </ul>
             </div>
-            <div class="places">
-                {% for place in places %}
-                <div class="place-name">{{place["Name"]}}</div>
-                <div class="place-description">{{place["Description"]}}</div>
-                <div class="place-capacity">{{place["Capacity"]}}</div>
-                <div class="place-availability">{{place["Availability"]}}</div>
-                {% endfor %}
+            <div class="location-page">
+                <div class="location-list">
+                    {% for place in places %}
+                    <div class="location">
+                        <div class="location-image">
+                            <image src="/static/images/{{ place['image'] }}" /> 
+                            <div class="overlay">
+                                <div class="overlay-text">{{ place["Description"] }}</div>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="location-name">
+                                <a href="{{ url_for('edit_location', location=place['Name'])}}"> {{place["Name"]}}</a>
+                            </div>
+                            <div class="location-description">{{place["Description"]}}</div>
+                            <div class="location-capacity">{{place["Capacity"]}}</div>
+                            <div class="location-availability">{{place["Availability"]}}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </body>

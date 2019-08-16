@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Location</title>
+        <link rel="stylesheet" href="/static/add_place.css">
+    </head>
+    <body>
+        <form action="{{url_for('edit_location', location=data['name'])}}" method="post" enctype = "multipart/form-data">
+            <div>
+                <label for="name">Location Name: </label>
+                <input type="text" id="name" name="name" required="required" value="{{data['name']}}">
+            </div>
+            <div>
+                <label for="description">Description: </label>
+                <input type="text" id="description" name="description" required="required" value="{{data['description']}}">
+            </div>
+            <div>
+                <label for="capacity">Capacity: </label>
+                <input type="number" id="capacity" name="capacity" required="required" value="{{data['capacity']}}">
+            </div>
+            <div>
+                <label for="availability">Availability: </label>
+                <input type="text" id="availability" name="availability" required='required' value="{{data[availability']}}">
+            </div>
+            <div>
+                <label for="inmage">Product image:</label>
+                <input type="file" id="image" name="image"> 
+                <image src="/static/images/{{data['image']}}" style="width:100px;display:block;margin:auto auto" />
+            </div>
+            <div class = "button">
+                <button type="submit" name="submit" value="update">Update Location</button>
+                <button type="submit" name="submit" value="delete">Delete Location</button>
+            </div>
+        </form>
+    </body>
+</html>

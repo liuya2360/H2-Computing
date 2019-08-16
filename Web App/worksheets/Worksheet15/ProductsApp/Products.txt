@@ -1,0 +1,5 @@
+name,description,price,image
+Baby Rockie Bag,Roomy main compartment with our signature front pocket design,42.00,backpack.png
+Zenon EOS6D,Duis felis orci pulvinar id metus ut rutrum luctus orci,1392.00,camera.png
+Cool Look,A classical design in matt finish. Durable tough and resistent to heat and cold,342.00,glasses.jpg
+Scott Digital Smart Band,4/7 heart rate monitoring with Elevate wrist heart rate technology,365.00,watch.png

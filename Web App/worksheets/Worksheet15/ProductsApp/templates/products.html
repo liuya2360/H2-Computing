@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="/static/products.css" />
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>Home</li>
+            <li>View Catalogue</li>
+            <li><a href="/product">Add product</a></li>
+            <li>Help</li>
+        </ul>
+    </div> 
+    <h1> Products</h1>
+    <div class="product-list">
+        {% for line in products %}
+        <div class="product">
+            <div class="product-image">
+                <image src="/static/images/{{ line[3] }}" />
+            </div>           
+            <div class="product-text">
+                <div class="product-name">
+                    <a href="{{ url_for('edit_product', product=line[0])}}">{{ line[0] }}</a>
+                </div>
+                <div class="product-description">{{ line[1] }}</div>
+                <div class="product-price">${{ line[2] }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

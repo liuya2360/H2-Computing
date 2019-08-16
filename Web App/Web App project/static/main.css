@@ -1,0 +1,240 @@
+body {
+    margin: 0px;
+    padding: 0;
+    border: 0;
+    text-align: justify;
+}
+
+.location-list {
+    margin: auto;
+    padding: 2%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+.location {
+    margin: 2% auto;
+    border-radius: 15px;
+    /* border: 1px lightgray solid; */
+    background-color: #E5E5E5;
+    padding: 10px;
+    display: table;
+}
+.location-image{ 
+    margin: auto;
+    padding:5px;
+    align-items: center;
+    width: 95%;
+    position: relative;
+    background-color: #8DB2D8;
+ }
+ img {
+     width: 100%; 
+ }
+
+.overlay {
+  position: absolute;
+  margin: auto;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #6899CA;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.location-image:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlay-text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.location-info { 
+    margin: auto; 
+    width: 95%; 
+    padding: 5px;
+    background-color: #CCCCCC;
+}
+.location-name {
+    color:steelblue;
+    font-family:'Comic Sans MS';
+    font-size:1.5rem;
+    text-align: center; 
+}
+.location-description {
+    color: black;
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;    
+}
+.location-capacity {
+    color:black;
+    font-family: Arial;
+    font-size: 1rem;
+    
+}
+
+.location-availability {
+    color:black;
+    font-family: Arial;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.location-page{
+    margin-left: 20%; 
+}
+
+.menu {
+    width: 25%; 
+    color: white;
+
+}
+#logo {
+    float:right;
+    width:auto;
+    height:50px;
+}
+.menu ul {
+    margin: 0 auto;
+    list-style: none;
+    padding:0;  
+    width: 20%;
+    background-color: #8DB2D8;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.menu li{
+    font-family: Arial;
+    font-size: 1em;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.menu li a.active {
+  background-color: #437FBC;
+  color: white;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.menu a {
+    padding: 0 0;
+    font-family: Arial;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.title{
+    height: 8em; 
+    background: url("images/NJC50-Formation.png");
+}
+
+.title-text{
+    color; white; 
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: ariel;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .list {
+        background-color: white;
+        padding: 10px;
+        margin: 5px;
+        flex: 1 10%;
+    }
+
+    .location-list {
+        margin: auto;
+        padding: 2%;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around;
+    }
+    .location-page{
+        margin-left: 20%;
+    }
+
+    .menu {
+        width: 25%; 
+        color: white;
+
+    }
+    #logo {
+        float:right;
+        width:auto;
+        height:50px;
+    }
+    .menu ul {
+        margin: 0 auto;
+        list-style: none;
+        padding:0;  
+        width: 20%;
+        background-color: #8DB2D8;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+    }
+    .menu li{
+        font-family: Arial;
+        font-size: 1em;
+    }
+
+    .menu li a {
+      display: block;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    .menu li a.active {
+      background-color: #437FBC;
+      color: white;
+    }
+
+    .menu li a:hover:not(.active) {
+      background-color: #CCCCCC;
+      color: black;
+    }
+
+    .menu a {
+        padding: 0 0;
+        font-family: Arial;
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+
+

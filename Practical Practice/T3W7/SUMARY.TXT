@@ -1,0 +1,4 @@
+199.32.43.22             01/Jul/1995,01/Jul/1995,01/Jul/1995,02/Jul/1995,03/Jul/1995,03/Jul/1995
+abc.xom.com              02/Jul/1995,03/Jul/1995
+fds.err.saa              02/Jul/1995
+computing.com            01/Jul/1995,03/Jul/1995,05/Jul/1995

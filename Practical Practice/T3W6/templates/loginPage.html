@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Login Page</title>
+        <style> 
+            form { 
+                margin: 10px auto; 
+                width: 600px; 
+                padding: 1em; 
+                border: 1px solid black; 
+                border-radius: 1em; 
+            }
+            form div + div {
+                margin-top: 1em; 
+            }
+            label {
+                display: inline-block; 
+                width: 100px; 
+                height: 1.5em; 
+                text-align: right; 
+            }
+            input {
+                font: 1em ariel; 
+                width: 300px; 
+                height: 1.5; 
+                box-sizing: border-box; 
+                border: 1px solid #999; 
+            }
+        </style>
+    </head>
+    <body> 
+        <div>
+            <p>Please input your login ID and password: </p>
+        </div>
+        <div>
+            <p style="color: red">{{ loginMessage }}</p>
+        </div>
+         <form action="/login" method="POST"> 
+            <div>
+                <label for="loginID">Login ID: </label> 
+                <input type="text" id="loginID" name="loginID"> 
+            </div>
+            <div>
+                <label for="password">Password: </label> 
+                <input type="text" id="password" name="password"> 
+            </div>
+            <div class="button"> 
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
