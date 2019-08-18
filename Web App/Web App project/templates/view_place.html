@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Location</title> 
+        <link rel="stylesheet" type="text/css" href="/static/view_place.css" />
+    </head>
+    <body>
+        <div>
+            <div>
+                <div class="location">
+                    <div class="location-image">
+                        <image src="/static/images/{{ place['image'] }}" /> 
+                        <div class="overlay">
+                            <div class="overlay-text">{{ place["Description"] }}</div>
+                        </div>
+                    </div>
+                    <div class="location-info">
+                        <div class="location-name">
+                            <a href="{{ url_for('edit_location', location=place['Name'])}}"> {{place["Name"]}}</a>
+                        </div>
+                        <div class="location-description">{{place["Description"]}}</div>
+                        <div class="location-capacity">{{place["Capacity"]}}</div>
+                        <div class="location-availability">{{place["Availability"]}}</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

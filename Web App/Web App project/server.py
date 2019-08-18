@@ -39,6 +39,18 @@ def submit_add_location():
     con.commit()
     return redirect("/")
 
+@app.route("/view_location/<location>", methods=["GET"])
+def view_location(location): 
+    try: 
+        con = open_DB("places.db") 
+        cur = con.cursor() 
+        cur.execute("SELECT * FROM places where name=?", (location,)) 
+        row = cur.fetchone() 
+        con.close() 
+    except Exception as e: 
+        print(str(e))
+    return render_template("view_place.html", data = row) 
+
 @app.route("/edit/<location>", methods=["GET"])
 def edit_location(location): 
     try: 
