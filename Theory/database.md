@@ -100,3 +100,7 @@
 	* SQLite Type Affinities: **integer**, **text**, **real**, numberic, blob  
 
 ### Create Table 
+
+### Multi-table SELECT Statements 
+* SELECT loan.name FORM book, loan WHERE book.isbn13 = loan.isbn13 AND book.title = 'Introduction to Algorithms'
+* SELECT loan.name FROM book INNER JOIN `

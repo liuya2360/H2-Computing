@@ -5,22 +5,36 @@
         <link rel="stylesheet" type="text/css" href="/static/view_place.css" />
     </head>
     <body>
-        <div>
-            <div>
+        <div class="main-page"></div>
+            <div class="menu">
+                <ul>
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="/add_location">Add Place</a></li>
+                </ul>
+            </div>
+            <div class="location-page">
                 <div class="location">
                     <div class="location-image">
                         <image src="/static/images/{{ place['image'] }}" /> 
-                        <div class="overlay">
-                            <div class="overlay-text">{{ place["Description"] }}</div>
-                        </div>
                     </div>
                     <div class="location-info">
                         <div class="location-name">
-                            <a href="{{ url_for('edit_location', location=place['Name'])}}"> {{place["Name"]}}</a>
+                            <a> {{place["Name"]}}</a>
                         </div>
                         <div class="location-description">{{place["Description"]}}</div>
                         <div class="location-capacity">{{place["Capacity"]}}</div>
                         <div class="location-availability">{{place["Availability"]}}</div>
+                        <div> 
+                            <div class=edit_button>
+                                <a href="{{ url_for('edit_location', location=place['Name']) }}">Edit</a>
+                            </div>
+                            <div class=edit_button>
+                                <a href="{{ url_for('view_location', location=next_place) }}">Next Location</a>
+                            </div>
+                            <div class=edit_button>
+                                <a href="{{ url_for('view_location', location=prev_place) }}">Precious Location</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div> 

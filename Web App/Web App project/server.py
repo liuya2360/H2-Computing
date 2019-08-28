@@ -26,7 +26,7 @@ def submit_add_location():
     capacity = request.form["capacity"]
     availability = request.form["availability"] 
     if "image" in request.files: 
-        image_file = request.file["image"]
+        image_file = request.files["image"]
         image_file_name = image_file.filename 
         image_file.save("static/images/"+image_file_name) 
 
@@ -46,12 +46,19 @@ def view_location(location):
         cur = con.cursor() 
         cur.execute("SELECT * FROM places where name=?", (location,)) 
         row = cur.fetchone() 
+        cur.execute("SELECT * FROM places")
+        places = cur.fetchall() 
+        for i in range(len(places)): 
+            if places[i]["name"] == row["name"]:
+                next_place = places[(i+1)%len(places)]["name"]
+                prev_place = places[(i-1+len(places)%len(places))]["name"]
+                break 
         con.close() 
     except Exception as e: 
         print(str(e))
-    return render_template("view_place.html", data = row) 
+    return render_template("view_place.html", place = row, next_place=next_place, prev_place=prev_place) 
 
-@app.route("/edit/<location>", methods=["GET"])
+@app.route("/edit/<location>")
 def edit_location(location): 
     try: 
         con = open_DB("places.db") 
@@ -61,10 +68,10 @@ def edit_location(location):
         con.close() 
     except Exception as e: 
         print(str(e))
-    return render_template("edit_place.html", data = row)
+    return render_template("edit_place.html", place = row) 
 
 @app.route("/edit/<location>", methods=["POST"])
-def update_locaiton(locaiton): 
+def update_location(location): 
     image_file_name = "" 
     if "image" in request.files: 
         image_file = request.files["image"] 
@@ -80,11 +87,10 @@ def update_locaiton(locaiton):
         elif request.form["submit"] == "update" and image_file_name != "": 
             cur.execute("UPDATE places set name=?, description=?, capability=?, availability=? where name=?",\
             (request.form["name"], request.form["description"], request.form["capacity"], request.form["availability"],\
-                request.form["location"])) 
+                request.form["location"], request.form["image"])) 
         elif request.form["submit"] == "delete": 
-            cur.execute("DELETE FROM places where name=?", (locaiton,))
-            msg = "Location Deleted. " 
-            
+            cur.execute("DELETE FROM places where name=?", (location,))
+            msg = "Location Deleted. "
         con.commit() 
         con.close() 
     except Exception as e: 

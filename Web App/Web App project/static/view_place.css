@@ -34,37 +34,6 @@ body {
      width: 100%; 
  }
 
-.overlay {
-  position: absolute;
-  margin: auto;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: #6899CA;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-}
-
-.location-image:hover .overlay {
-  bottom: 0;
-  height: 100%;
-}
-
-.overlay-text {
-  white-space: nowrap; 
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
 .location-info { 
     margin: auto; 
     width: 95%; 
@@ -157,11 +126,36 @@ body {
 }
 
 .title-text{
-    color; white; 
+    color: white; 
     font-size: 2em;
     font-weight: bolder;
     font-family: ariel;
     text-align: center;
+}
+
+.edit_buttons {
+    align-items: center;  
+}
+
+.edit_button {
+    border-radius: 5px;
+    text-align: center; 
+    margin: 3px;
+    width: 140px; 
+}
+
+.edit_button a:link, a:visited {
+  border-radius: 3px; 
+  padding: 2px 5px 2px 5px; 
+  background-color: black;
+  color: white;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+.edit_button a:hover, a:active {
+  background-color: #CCCCCC;
 }
 
 @media only screen and (max-width: 600px) {

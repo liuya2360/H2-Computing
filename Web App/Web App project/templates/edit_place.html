@@ -5,29 +5,29 @@
         <link rel="stylesheet" href="/static/add_place.css">
     </head>
     <body>
-        <form action="{{url_for('edit_location', location=data['name'])}}" method="post" enctype = "multipart/form-data">
+        <form action="{{url_for('update_location', location=place['name'])}}" method="post" enctype = "multipart/form-place">
             <div>
                 <label for="name">Location Name: </label>
-                <input type="text" id="name" name="name" required="required" value="{{data['name']}}">
+                <input type="text" id="name" name="name" required="required" value="{{place['name']}}">
             </div>
             <div>
                 <label for="description">Description: </label>
-                <input type="text" id="description" name="description" required="required" value="{{data['description']}}">
+                <input type="text" id="description" name="description" required="required" value="{{place['description']}}">
             </div>
             <div>
                 <label for="capacity">Capacity: </label>
-                <input type="number" id="capacity" name="capacity" required="required" value="{{data['capacity']}}">
+                <input type="number" id="capacity" name="capacity" required="required" value="{{place['capacity']}}">
             </div>
             <div>
                 <label for="availability">Availability: </label>
-                <input type="text" id="availability" name="availability" required='required' value="{{data[availability']}}">
+                <input type="text" id="availability" name="availability" required='required' value="{{place['availability']}}">
             </div>
             <div>
                 <label for="inmage">Product image:</label>
                 <input type="file" id="image" name="image"> 
-                <image src="/static/images/{{data['image']}}" style="width:100px;display:block;margin:auto auto" />
+                <image src="/static/images/{{place['image']}}" style="width:100px;display:block;margin:auto auto" />
             </div>
-            <div class = "button">
+            <div class="button">
                 <button type="submit" name="submit" value="update">Update Location</button>
                 <button type="submit" name="submit" value="delete">Delete Location</button>
             </div>
