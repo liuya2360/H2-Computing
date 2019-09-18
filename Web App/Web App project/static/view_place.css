@@ -3,6 +3,7 @@ body {
     padding: 0;
     border: 0;
     text-align: justify;
+
 }
 
 .location-list {
@@ -21,6 +22,7 @@ body {
     background-color: #E5E5E5;
     padding: 10px;
     display: table;
+    width: 70%; 
 }
 .location-image{ 
     margin: auto;
@@ -50,13 +52,14 @@ body {
     color: black;
     font-family: Arial;
     font-size: 1rem;
-    font-style: normal;    
+    font-style: normal; 
+    padding: 4px 10px;  
 }
 .location-capacity {
     color:black;
     font-family: Arial;
     font-size: 1rem;
-    
+    padding: 4px 10px; 
 }
 
 .location-availability {
@@ -64,10 +67,19 @@ body {
     font-family: Arial;
     font-size: 1rem;
     text-align: left;
+    padding: 4px 10px;
 }
 
 .location-page{
     margin-left: 20%; 
+}
+
+.location-label {
+  width: fit-content; 
+  padding: 4px; 
+  border-radius: 5px;
+  font-family: Arial; 
+  font-weight: bold; 
 }
 
 .menu {
@@ -129,32 +141,49 @@ body {
     color: white; 
     font-size: 2em;
     font-weight: bolder;
-    font-family: ariel;
+    font-family: arial;
     text-align: center;
-}
-
-.edit_buttons {
-    align-items: center;  
 }
 
 .edit_button {
     border-radius: 5px;
     text-align: center; 
     margin: 3px;
-    width: 140px; 
 }
 
 .edit_button a:link, a:visited {
   border-radius: 3px; 
-  padding: 2px 5px 2px 5px; 
+  padding: 3px 5px 3px 5px; 
   background-color: black;
   color: white;
   text-align: center; 
   text-decoration: none;
   display: inline-block;
+  font-family: Arial; 
 }
 
 .edit_button a:hover, a:active {
+  background-color: #CCCCCC;
+}
+
+.buttons {
+  display: flex; 
+  padding:0 5px 0 5px;
+}
+
+button {
+  background-color: black;
+  color: white; 
+  font-size: 1em;
+  font-family: Arial; 
+  border-radius: 5px; 
+  padding: 3px 5px 3px 5px; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, active {
   background-color: #CCCCCC;
 }
 

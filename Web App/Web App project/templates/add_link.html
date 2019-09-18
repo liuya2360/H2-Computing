@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Link</title>
+        <link rel="stylesheet" type="text/css" href="/static/add_link.css" />
+    </head>
+    <body>
+        <div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/add_location">Add Location</a></li>
+                    <li><a class="active" href="/add_link">Add Link</a></li>
+                </ul>
+            </div>
+            <div class="form-page">
+                <form action="{{ url_for('add_link') }}" method="post" enctype = "multipart/form-place">
+                    <div>
+                        <label>Location 1: </label>
+                        <select name="location_1" required="required">
+                            {% for location in location_list %}
+                            <option value="{{ location['name'] }}">{{ location["name"] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label>Location 2: </label>
+                        <select name="location_2" required="required">
+                            {% for location in location_list %}
+                            <option value="{{ location['name'] }}">{{ location["name"] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button class="button" type="submit" name="submit" value="update">Add Link bewteen locations</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -8,8 +8,9 @@
         <div>
             <div class="menu">
                 <ul>
-                    <li><a class="active" href="/">Home</a></li>
-                    <li><a href="/add_location">Add Place</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a class="active" href="/add_location">Add Location</a></li>
+                    <li><a href="/add_link">Add Link</a></li>
                 </ul>
             </div>
             <div class="form-page">
@@ -28,8 +29,10 @@
                     </div>
                     <div>
                         <label for="availability">Availability: </label>
-                        <input type="radio" id="availability" name="availability" value="Yes" checked> Yes
-                        <input type="radio" id="availability" name="availability" value="No"> No
+                        <select name="availability" required="required">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option> 
+                        </select>
                     </div>
                     <div>
                         <label for="image">Product image:</label>

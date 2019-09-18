@@ -1,0 +1,32 @@
+body {
+    margin: 0 auto; 
+    padding: 0; 
+    background: #E5E5E5;
+}
+
+.msg {
+    margin: 3em 0; 
+    padding: 3em; 
+    text-align: center; 
+    font-size: 35px; 
+    font-family: Arial; 
+    font-weight: bold; 
+    background: #8DB2D8;
+    color: white; 
+}
+
+.start {
+    margin: auto; 
+    text-align: center; 
+    color: white; 
+    font-size: 25px; 
+    font-family: Arial; 
+}
+
+.start_box {
+    padding: 1em 2em; 
+    margin: auto; 
+    width: fit-content; 
+    background: #CCCCCC; 
+    border-radius: 1em; 
+}

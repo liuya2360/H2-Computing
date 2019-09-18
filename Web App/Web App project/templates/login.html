@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="/static/login.css"> 
+    </head>
+    <body>
+        <div class="main_page">
+            <div> 
+                <div class="welcome_msg">
+                    <p class="msg1">Welcome to National Junior College Visual Guide! </p>
+                    <p class="msg2">Please log in to view more content. </p>
+                </div>
+                <div class="error"> 
+                    <div class="errorMsg">{{ error }}</div>
+                </div>
+
+                <div class="login_form">
+                    <form method="post" enctype = "multipart/form-place">
+                        <div class="userId">
+                            <div class="userInfoText">User Name: </div>
+                            <input name="userId" type="text"> 
+                        </div>
+                        <div class="password"> 
+                            <div class="userInfoText">Password: </div> 
+                            <input name="password" type="text"> 
+                        </div>
+                        <button type="submit" class="button" name="submit" value="login">Log In</button> 
+                        <button type="submit" class="button" name="submit" value="register">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

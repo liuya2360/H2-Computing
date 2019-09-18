@@ -14,7 +14,7 @@ def binary_search(L, t):
 	start = 0
 	end = len(L)-1
 	while start <= end: 
-		mid = (start+end)//2
+		mid = (start+end)//h
 		if mid == t: 
 			return mid
 		elif mid < t: 
@@ -280,7 +280,7 @@ class queue():
 		else: 
 			toDequeue = self.array[self.head]
 			self.head = (self.head+1)%self.size 
-			if self.head == self.tail: 
+			if self.head == self.tail: #incorrect 
 				self.head, self.tail = -1, 0
 			return toDequeue
 

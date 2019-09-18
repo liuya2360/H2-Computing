@@ -21,6 +21,7 @@ body {
     background-color: #E5E5E5;
     padding: 10px;
     display: table;
+    width: 270px;
 }
 .location-image{ 
     margin: auto;
@@ -54,15 +55,17 @@ body {
 }
 
 .overlay-text {
-  white-space: nowrap; 
+  /* width: auto; */
+  white-space: inherit;
   color: white;
   font-size: 20px;
   position: absolute;
-  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .location-info { 
@@ -71,18 +74,21 @@ body {
     padding: 5px;
     background-color: #CCCCCC;
 }
+
 .location-name {
     color:steelblue;
     font-family:'Comic Sans MS';
     font-size:1.5rem;
     text-align: center; 
 }
+
 .location-description {
     color: black;
     font-family: Arial;
     font-size: 1rem;
     font-style: normal;    
 }
+
 .location-capacity {
     color:black;
     font-family: Arial;

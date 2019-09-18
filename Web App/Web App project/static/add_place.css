@@ -3,7 +3,6 @@ body {
     padding: 0;
     border: 0;
     text-align: justify; 
-    background-color: #437FBC
 }
 
 .form-page {
@@ -26,14 +25,14 @@ form div + div {
 label {
     /* To make sure that all labels have the same size and are properly aligned */
     display: inline-block;
-    width: 100px;
+    width: 20%;
     height:1.5em;
     text-align: right;
 }
 input, textarea {
     font: 1em sans-serif;
     /* To give the same size to all text fields */
-    width: 300px;
+    width: 75%;
     height:1.5em;
     box-sizing: border-box;
     /* To harmonize the look & feel of text field border */
@@ -46,17 +45,18 @@ textarea {
     height: 5em;
 }
 
-
 .menu {
     width: 25%; 
     color: white;
 
 }
+
 #logo {
     float:right;
     width:auto;
     height:50px;
 }
+
 .menu ul {
     margin: 0 auto;
     list-style: none;
@@ -67,6 +67,7 @@ textarea {
     height: 100%;
     overflow: auto;
 }
+
 .menu li{
     font-family: Arial;
     font-size: 1em;
@@ -96,4 +97,3 @@ textarea {
     color: white;
     text-decoration: none;
 }
-

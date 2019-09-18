@@ -8,8 +8,9 @@
         <div class="main-page">
             <div class="menu">
                 <ul>
-                    <li><a class="active" href="/">Home</a></li>
+                    <li><a class="active" href="/home">Home</a></li>
                     <li><a href="/add_location">Add Location</a></li>
+                    <li><a href="/add_link">Add Link</a></li> 
                 </ul>
             </div>
             <div class="location-page">
@@ -26,9 +27,8 @@
                             <div class="location-name">
                                 <a href="{{ url_for('view_location', location=place['Name']) }} "> {{place["Name"]}}</a>
                             </div>
-                            <div class="location-description">{{place["Description"]}}</div>
-                            <div class="location-capacity">{{place["Capacity"]}}</div>
-                            <div class="location-availability">{{place["Availability"]}}</div>
+                            <div class="location-capacity">Capacity: {{place["Capacity"]}}</div>
+                            <div class="location-availability">Availability: {{place["Availability"]}}</div>
                         </div>
                     </div>
                     {% endfor %}

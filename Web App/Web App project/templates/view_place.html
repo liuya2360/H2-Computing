@@ -8,8 +8,9 @@
         <div class="main-page"></div>
             <div class="menu">
                 <ul>
-                    <li><a class="active" href="/">Home</a></li>
-                    <li><a href="/add_location">Add Place</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/add_location">Add Location</a></li>
+                    <li><a href="/add_link">Add Link</a></li>
                 </ul>
             </div>
             <div class="location-page">
@@ -21,19 +22,41 @@
                         <div class="location-name">
                             <a> {{place["Name"]}}</a>
                         </div>
-                        <div class="location-description">{{place["Description"]}}</div>
-                        <div class="location-capacity">{{place["Capacity"]}}</div>
-                        <div class="location-availability">{{place["Availability"]}}</div>
-                        <div> 
-                            <div class=edit_button>
+                        <div style="display: flex">
+                            <div class="location-label">Capacity: </div>
+                            <div class="location-capacity">{{place["Capacity"]}}</div>
+                        </div>
+                        <div style="display: flex">
+                            <div class="location-label">Availability: </div>
+                            <div class="location-availability">{{place["Availability"]}}</div>
+                        </div>
+                        <div style="display: flex">
+                            <div class="location-label">Description: </div>
+                            <div class="location-description">{{place["Description"]}}</div>
+                        </div>
+                        <div class="buttons"> 
+                            <div class="edit_button">
                                 <a href="{{ url_for('edit_location', location=place['Name']) }}">Edit</a>
                             </div>
-                            <div class=edit_button>
-                                <a href="{{ url_for('view_location', location=next_place) }}">Next Location</a>
+                            {% if exitFlag != 0 %}
+                            <div class="buttons"> 
+                                <form href="{{ url_for('change_location', location=place['Name']) }}" method="post" enctype = "multipart/form-place">
+                                {% if request.form["submit"] is undefined %}
+                                <select name="exit">
+                                    {% for location in linked_locations %}
+                                        <option value="{{ location['location2'] }}">{{ location["location2"] }}</option>
+                                    {% endfor %}
+                                </select>
+                                <button type="submit" name="submit" value="submit">Confirm Location</button>
+                                {% endif %}
+                                </form>
+                                {% if request.form["submit"] is not undefined %}
+                                <div class="edit_button">
+                                    <a href="{{ url_for('view_location', location=request.form['exit']) }}">Exit</a>
+                                </div>
+                                {% endif %}
                             </div>
-                            <div class=edit_button>
-                                <a href="{{ url_for('view_location', location=prev_place) }}">Precious Location</a>
-                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

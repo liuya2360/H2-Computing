@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0; 
+    background: #E5E5E5; 
+}
+.welcome_msg {
+    margin: auto; 
+    text-align: center; 
+    background: #8DB2D8; 
+    padding: 1em;  
+}
+
+.msg1 {
+    font-size: 25px; 
+    color: white;
+    font-family: Arial; 
+    font-weight: bold; 
+}
+
+.msg2 {
+    font-size: 20px; 
+    color: white;
+    font-family: Arial; 
+    font-style: italic; 
+}
+
+.error {
+    text-align: center; 
+}
+
+.errorMsg {
+    margin: auto; 
+    padding: 10px; 
+    color: black; 
+    font-family: Arial; 
+    font-weight: bold; 
+    background: #CCCCCC;
+}
+
+.login_form {
+    margin: auto; 
+    padding: 2em; 
+ 
+}
+
+.userInfoText { 
+    font-family: Arial; 
+    font-size: 15px; 
+    padding: 5px;
+    background: #CCCCCC; 
+    margin: 5px 0; 
+    width: fit-content;
+     
+}
+
+.button {
+    margin: 10px 5px 10px 0; 
+    font-size: 15px; 
+    font-weight: bold; 
+    color: white; 
+    border-radius: 5px;
+    background: #8DB2D8; 
+    padding: 5px 5px; 
+}
+
+input {
+    font-size: 15px; 
+    margin: 5px;
+}
+
+.userId {
+    display: flex; 
+}
+
+.password {
+    display: flex; 
+}

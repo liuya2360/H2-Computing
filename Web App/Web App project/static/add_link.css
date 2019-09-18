@@ -1,0 +1,101 @@
+body {
+    margin: 0px;
+    padding: 0;
+    border: 0;
+    text-align: justify; 
+}
+
+.form-page {
+    margin-left: 20%; 
+}
+
+form {
+    /* Just to center the form on the page */
+    margin: 10px auto;
+    width: 600px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    background-color: #8DB2D8; 
+}
+form div + div {
+    margin-top: 1em;
+}
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 100px;
+    height:1.5em;
+    text-align: right;
+}
+input, textarea {
+    font: 1em sans-serif;
+    /* To give the same size to all text fields */
+    width: 300px;
+    height:1.5em;
+    box-sizing: border-box;
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+    /* To give enough room to type some text */
+    height: 5em;
+}
+
+
+.menu {
+    width: 25%; 
+    color: white;
+
+}
+#logo {
+    float:right;
+    width:auto;
+    height:50px;
+}
+.menu ul {
+    margin: 0 auto;
+    list-style: none;
+    padding:0;
+    width: 20%;
+    background-color: #8DB2D8;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.menu li{
+    font-family: Arial;
+    font-size: 1em;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.menu li a.active {
+  background-color: #437FBC;
+  color: white;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.menu a {
+    padding: 0 0;
+    font-family: Arial;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+  margin: 15px 0px 5px 25px; 
+}
