@@ -1,0 +1,3 @@
+Statistics for:tst.txt
+Total lines:3
+Items per Line:4,4,1
