@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+		<title> A Level Result Calculation </title> 
+		<style> 
+			body {
+				margin: 0px;
+				padding: 0; 
+				text-align: center; 
+			}
+			form { 
+				margin: 10px auto; 
+				width: 600px; 
+				padding: 1em; 
+				border: 1px black; 
+				border-radius: 1em; 
+			}
+			form div + div {
+				margin-top: 1em; 
+			} 
+			label {
+				display: inline-block; 
+				width: 20%; 
+				height: 1.5em; 
+				text-align: right; 
+			}
+			input {
+				font: 1em sans-serif; 
+				width: 75%; 
+				height: 1.5em; 
+			}
+		</style> 
+	</head> 
+	<body> 
+		<div>
+			<h1> A Level Result Score Calculation </h1> 
+			<form action="\submit" method="post" enctype="multipart/form-data"> 
+				<div> 
+					<label for="result1">First H2: </label> 
+					<input type="text" id="result1" name="result1" required> 
+				</div> 
+				<div> 
+					<label for="result2">Second H2: </label> 
+					<input type="test" id="result2" name="result2" required> 
+				</div> 
+				<div>
+					<label for="result3">Third H2: </label> 
+					<input type="test" id="result3" name="result3" required> 
+				</div> 
+				<div> 
+					<label for="result4">H1/Lowest H2: </label> 
+					<input type="test" id="result4" name="result4" required> 
+				</div> 
+				<div> 
+					<label for="result_mt">Mother Tongue: </label> 
+					<input type="test" id="result_mt" name="result_mt"> 
+				</div> 
+				<div> 
+					<label for="result_gp">GP/KI:  </label> 
+					<input type="test" id="result_gp" name="result_gp" required> 
+				</div> 
+				<div> 
+					<label for="result_pw">PW: </label> 
+					<input type="test" id="resul_pw" name="result_pw" required>
+				</div> 
+				<div> 
+					<button type="submit">Submit</button> 
+				</div> 
+			</form> 
+		</div> 
+	</body> 
+</html>
