@@ -1,0 +1,54 @@
+//Used interchangeably in the code for readability
+Ten = 'X'
+Strike = Ten
+
+//Converting the 'X' or 'number' to INTEGER
+FUNCTION Pins(Throw as STRING)
+    IF Throw = Ten THEN
+            RETURN 10
+    ELSE
+        RETURN INTEGER(Throw)
+    ENDIF
+END FUNCTION
+
+//Recursive Procedure
+FUNCTION Bowling_Score(Throws as STRING)
+
+    //Helper function to keep track of current frame number
+    FUNCTION Bowling_Score_Helper(Throws as STRING, Frame_Num as INTEGER)
+        
+        //Frame 10 with no bonus
+        IF Frame_Num = 10 AND LENGTH(Throws) = 2 THEN
+           RETURN SUM(Pins(Throws[0]), Pins(Throws[1]))
+        ENDIF
+
+        //Frame 10 with bonus
+        IF Frame_Num = 10 AND LENGTH(Throws) = 3 THEN
+           RETURN SUM(Pins(Throws[0]),Pins(Throws[1]),Pins(Throws[2]))
+        ENDIF
+
+        //A Strike
+        IF Throws[0] = Strike THEN
+           Frame_Score = 10 + SUM(Pins(Throws[1]), Pins(Throws[2]))
+           RETURN Frame_Score 
+                  + Bowling_Score_Helper(Throws[1:], Frame_Num + 1)
+        ENDIF
+
+        Frame_Score = SUM(Pins(Throws[0]), Pins(Throws[1]))
+
+        //A Spare
+        IF Frame_Score = 10 THEN
+            RETURN 10 + Pins(Throws[2]) 
+                      + Bowling_Score_Helper(Throws[2:], Frame_Num + 1)
+        ENDIF
+
+        //Frame with no bonus
+        RETURN Frame_Score + Bowling_Score_Helper(Throws[2:], Frame_Num + 1)
+    END FUNCTION
+
+    RETURN Bowling_Score_Helper(Throws, 1)
+END FUNCTION
+
+//For Evidence 9
+Bowling_Score('X2815X91X365452X0X')
+Bowling_Score('91739182X90X90X82X')

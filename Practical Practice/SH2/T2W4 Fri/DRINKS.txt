@@ -1,0 +1,59 @@
+Kopi
+Kopi Siew Dai
+Kopi Ga Dai
+Kopi Po
+Kopi Gau
+Kopi Po Siew Dai
+Kopi Po Ga Dai
+Kopi Gau Siew Dai
+Kopi Gau Ga Dai
+Kopi Kosong
+Kopi C
+Kopi C Siew Dai
+Kopi C Ga Dai
+Kopi C Po
+Kopi C Gau
+Kopi C Po Siew Dai
+Kopi C Po Ga Dai
+Kopi C Gau Siew Dai
+Kopi C Gau Ga Dai
+Kopi C Kosong
+Kopi O
+Kopi O Siew Dai
+Kopi O Ga Dai
+Kopi O Po
+Kopi O Gau
+Kopi O Po Siew Dai
+Kopi O Po Ga Dai
+Kopi O Gau Siew Dai
+Kopi O Gau Ga Dai
+Kopi O Kosong
+Teh
+Teh Siew Dai
+Teh Ga Dai
+Teh Kosong
+Teh Tarik
+Teh Halia
+Teh C
+Teh C Siew Dai
+Teh C Ga Dai
+Teh C Kosong
+Teh C Tarik
+Teh O
+Teh O Siew Dai
+Teh O Ga Dai
+Teh O Kosong
+Teh O Tarik
+Tiao Her
+Tak Kiu
+Milo Dinosaur
+Michael Jackson
+Clementi
+Tai Ka Ho
+Kup Poh
+Ji Ba Ho
+Ah Huey
+Buay Si Gor Lak
+Lao Hor
+Orh Gao
+Wang Qing Shui
