@@ -9,6 +9,7 @@
   - linear search 
   - binary search 
 7. Base conversion 
+8. Sort 
   - bubble sort (2) 
   - insertion sort (3) 
   - quick sort (4) 
