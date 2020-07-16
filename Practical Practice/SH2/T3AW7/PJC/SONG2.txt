@@ -1,0 +1,5 @@
+G5955	Golden
+C9999	Champion
+D7474	Delta
+J8868	Jump
+R1711	Radar
